@@ -1,0 +1,20 @@
+[[package]]
+name = "gdal"
+version = "3.4.3"
+description = "GDAL: Geospatial Data Abstraction Library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.extras]
+numpy = ["numpy (>1.0.0)"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "94dbc13c7a5636fe9bc9ec09610e2a58287ad7b759f45aca236e59702c8f2c9c"
+
+[metadata.files]
+gdal = [
+    {file = "GDAL-3.4.3.tar.gz", hash = "sha256:f4f4b0bb34073b164c5a05a1b0eb44af47349e5606eb7b75244c2167ac462f36"},
+]
