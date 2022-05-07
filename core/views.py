@@ -1,3 +1,4 @@
+from cgitb import lookup
 from django.http import HttpResponse, JsonResponse
 from django.utils.decorators import method_decorator
 from django.shortcuts import get_object_or_404
@@ -8,6 +9,7 @@ from rest_framework.views import APIView
 from rest_framework.serializers import ModelSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 import json 
 
@@ -94,3 +96,12 @@ class CategoriaDetail(APIView):
         categoria = get_object_or_404(Categoria.objects.all(),id=id)
         categoria.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class CategoriasListGeneric(ListCreateAPIView):
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
+
+class CategoriaDetailGeneric(RetrieveUpdateDestroyAPIView):
+    lookup_field = 'id'
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
