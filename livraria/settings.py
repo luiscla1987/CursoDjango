@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-a=gq)=scu4gdb(^6tka7f#^71==nvd9ne06m0#le_1+tk5twds
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['livraria-curso.herokuapp.com',]
+ALLOWED_HOSTS = ['livraria-curso.herokuapp.com','127.0.0.1','localhost',]
 
 
 # Application definition
